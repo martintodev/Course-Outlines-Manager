@@ -25,6 +25,12 @@ app.post('/outline', (req, res) => {
     });
 });
 
+app.get('/outline', (req, res) => {
+    database.collection("outline").find().toArray(function (error, data) {
+        res.send((data ? data : error));
+    });
+});
+
 app.listen(PORT, (error) => {
     if (!error)
         console.log("Server is Successfully Running, and App is listening on port " + PORT)
