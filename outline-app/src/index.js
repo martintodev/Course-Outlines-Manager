@@ -6,6 +6,7 @@ import PrivateRoute from './PrivateRoutes/PrivateRoutes';
 import CurrentUser from './CurrentUser/CurrentUser';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import Home from './components/Home/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Route path = '/' element = {<CurrentUser></CurrentUser>}/>
       <Route path = "/login" element = {<Login />} component = {CurrentUser}/>
       <Route path = "/register" element = {<Register />}/>
+      <Route path = "/home" element = { <Home /> } />
 
       <Route path = "/test" element = {<PrivateRoute><Register /></PrivateRoute>}/>
       
